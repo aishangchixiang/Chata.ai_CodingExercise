@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "94dc86f4-e405-4913-9e57-8f54889165b7",
+		"name": "Chata.ai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18852789"
+	},
+	"item": [
+		{
+			"name": "case_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/search?string=Now is",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "Now is"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "case_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/search?string=racial injustice to",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "racial injustice to"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "case_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/search?string=desolate valley",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "desolate valley"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "case_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/search?string=gradualism.  Now is the time to rise from the dark and desolate valley of segregation to the sunlit path of racial justice.  Now is the time to open the",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "gradualism.  Now is the time to rise from the dark and desolate valley of segregation to the sunlit path of racial justice.  Now is the time to open the"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "case_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/search?string=asdesce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "asdesce"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

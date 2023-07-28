@@ -60,5 +60,5 @@ def find_string(text, search_string):
 
 if __name__ == "__main__":
     nltk.download('punkt')
-    app.run(port=8001, debug=True)
+    app.run(port=8001, debug=True, host='0.0.0.0')
 
