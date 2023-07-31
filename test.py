@@ -70,5 +70,14 @@ class TestApp(unittest.TestCase):
         results_5 = app.find_string(text_2, 'hello')
         self.assertEqual(len(results_5), 0)
 
+
+        #tet cast6 - mutiple lines 
+        result_6 = app.find_string(text, 'men to come to the aid of their country')
+        self.assertEqual(len(result_6), 1)
+        self.assertEqual(result_6[0]['line'], 2)
+        self.assertEqual(result_6[0]['start'], 14)
+        self.assertEqual(result_6[0]['end'], 17)
+        self.assertEqual(result_6[0]['in_sentence'], 'Now is the time for all good men to come to the aid of their country.')
+
 if __name__=='__main__':
     unittest.main()

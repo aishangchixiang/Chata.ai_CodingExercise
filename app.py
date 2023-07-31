@@ -29,26 +29,25 @@ def find_string(text, search_string):
     matches = re.finditer(search_string, text.replace('\n', ' '))
     lines = text.split('\n')
     sentences = nltk.tokenize.sent_tokenize(text)
+    # If storing them in lists, then we don't have to use find(), it can be more efficient in terms of time, but consumes more memory.
     for match in matches:
         in_sentence = []
         for sentence in sentences:
-            if text.find(sentence) + len(sentence) >= match.end():
+            if  match.end() <= text.find(sentence) + len(sentence):
                 in_sentence.append(sentence.replace('\n', ' '))
                 break
             if text.find(sentence) + len(sentence) < match.end() and text.find(sentence) + len(sentence) >= match.start():
                 in_sentence.append(sentence.replace('\n', ' '))
                 continue
+
         for i, line in enumerate(lines):
-            if match.start() >= text.find(line) and match.end() <= text.find(line) + len(line):
+            if text.find(line) <= match.start() <= text.find(line) + len(line):
                 line_number = i + 1
                 start = match.start() - text.find(line) + 1
+            if text.find(line) <= match.end() <= text.find(line) + len(line):
                 end = match.end() - text.find(line) + 1
                 break
-            if match.start() >= text.find(line) and match.start() <= text.find(line) + len(line) and match.end() > text.find(line) + len(line):
-                line_number = i + 1
-                start = match.start() - text.find(line) + 1
-                end = match.end() - text.find(line) - len(line)
-                break
+
         occurrences.append({
             "start": start,
             "end": end,
