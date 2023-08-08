@@ -1,5 +1,10 @@
 # Chata.ai_CodingExercise
 This is a python coding exercise at Chata.ai.
+Now it has been deployed on the AWS EC2, please use curl or Postman tool to check the API like this:
+
+```shell
+$ curl "http://3.135.201.101:8001/search?string=Now%20is"
+```
 
 ## Installation
 
